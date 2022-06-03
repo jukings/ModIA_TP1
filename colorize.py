@@ -44,11 +44,11 @@ def train(net, optimizer, loader, epochs=5, writer=None):
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_name', type=str, default = 'Colorize', help='experiment name')
-    parser.add_argument('--data_path', ...)
-    parser.add_argument('--batch_size'...)
-    parser.add_argument('--epochs'...)
-    parser.add_argument('--lr'...)
+    parser.add_argument('--exp_name', type=str, default='Colorize', help='experiment name')
+    parser.add_argument('--data_path', type=str, default='data/landscapes', help='data path')
+    parser.add_argument('--batch_size', type=int, default='16')
+    parser.add_argument('--epochs', type=int, default='10')
+    parser.add_argument('--lr', type=float, default='10**-3')
 
     args = parser.parse_args()
     exp_name = args.exp_name
